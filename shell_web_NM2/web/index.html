@@ -10,7 +10,7 @@
             eel.quit();
         };
     </script>
-    <title>Eel Inline HTML</title>
+    <title>SPX</title>
     <style>
         body { margin: 0; padding: 0; }
         iframe {
@@ -35,6 +35,10 @@
     eel.icon_data()(function(icon_data) {
         let link = document.getElementById('asddftgy');
         link.href = 'data:image/x-icon;base64,' + icon_data;
+    });
+
+    eel.name()(function(name) {
+        document.title = name;
     });
 </script>
 </html>
