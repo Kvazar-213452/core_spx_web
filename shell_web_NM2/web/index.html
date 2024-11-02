@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script type="text/javascript" src="eel.js"></script>
+    <link id="asddftgy" rel="icon" href="" type="image/x-icon">
     <script type="text/javascript">
         window.onbeforeunload = function () {
             eel.quit();
@@ -23,6 +24,17 @@
     </style>
 </head>
 <body>
-    <iframe src="http://127.0.0.1:3000"></iframe>
+    <iframe id="fwesdws" src=""></iframe>
 </body>
+<script>
+    eel.port()(function(port) {
+        let iframe = document.getElementById('fwesdws');
+        iframe.src = 'http://127.0.0.1:' + port;
+    });
+
+    eel.icon_data()(function(icon_data) {
+        let link = document.getElementById('asddftgy');
+        link.href = 'data:image/x-icon;base64,' + icon_data;
+    });
+</script>
 </html>

@@ -4,20 +4,25 @@ import sys
 
 width = sys.argv[1]
 height = sys.argv[2]
+port_data = sys.argv[3]
 
 find_free_port_dll = ctypes.CDLL('./FindFreePort.dll')
 find_free_port_dll.FindFreePort.restype = ctypes.c_int
-
-def get_free_port():
-    port = find_free_port_dll.FindFreePort()
-    return port
 
 @eel.expose
 def quit():
     sys.exit()
 
-eel.init('.')
+@eel.expose
+def port():
+    return port_data
 
-free_port = get_free_port()
+@eel.expose
+def icon_data():
+    with open('icon.data', 'r') as file:
+        base64_data = file.read()
+    return base64_data
 
-eel.start('index.html', size=(width, height), port=free_port)
+eel.init('web')
+
+eel.start('index.html', size=(width, height), port=find_free_port_dll.FindFreePort())
