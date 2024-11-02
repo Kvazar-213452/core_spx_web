@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type="text/javascript" src="eel.js"></script>
+    <script type="text/javascript">
+        window.onbeforeunload = function () {
+            eel.quit();
+        };
+    </script>
+    <title>Eel Inline HTML</title>
+    <style>
+        body { margin: 0; padding: 0; }
+        iframe {
+            position: fixed;
+            height: 100%;
+            width: 100%;
+            top: 0;
+            left: 0;
+            border: none;
+        }
+    </style>
+</head>
+<body>
+    <iframe src="http://127.0.0.1:3000"></iframe>
+</body>
+</html>
