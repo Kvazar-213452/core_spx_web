@@ -1,4 +1,4 @@
 * text=auto
 
 shell_web_NM1/webview.h linguist-documentation
-shell_web_NM3/obj/**.cs linguist-documentation
+shell_web_NM3/obj/Debug/net8.0-windows/**.cs linguist-documentation
