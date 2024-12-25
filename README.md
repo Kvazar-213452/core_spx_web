@@ -8,3 +8,5 @@ start command - ./main 600 600 4000 hello
 
 lib
 go build -o FindFreePort.dll -buildmode=c-shared main.go
+
+dotnet publish -c Release -r win-x64 --self-contained true /p:PublishSingleFile=true /p:PublishTrimmed=true
